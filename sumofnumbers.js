@@ -1,13 +1,14 @@
+"use strict";
 function sumFor(numbers) {
-    var sum = 0;
-    for (var i = 0; i < numbers.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
         sum += numbers[i];
     }
     return sum;
 }
 function sumWhile(numbers) {
-    var sum = 0;
-    var i = 0;
+    let sum = 0;
+    let i = 0;
     while (i < numbers.length) {
         sum += numbers[i];
         i++;
@@ -21,9 +22,9 @@ function sumRecursion(numbers) {
     return numbers[0] + sumRecursion(numbers.slice(1));
 }
 function sumTheFunctionalWay(numbers) {
-    return numbers.reduce(function (acc, current) { return acc + current; }, 0);
+    return numbers.reduce((acc, current) => acc + current, 0);
 }
-var testArray = [1, 2, 3, 4];
+const testArray = [1, 2, 3, 4];
 console.log('for-loop:', sumFor(testArray));
 console.log('while-loop:', sumWhile(testArray));
 console.log('recursion:', sumRecursion(testArray));
